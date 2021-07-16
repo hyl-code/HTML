@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            /*banner*/
+            .box{
+                overflow:hidden;
+                width:100%;
+                height: 445px;
+                border: 1px solid black;
+            }
+            .banner {
+                width: 100%;
+                height: 420px;
+                background-repeat: no-repeat;
+                background-size:100%;
+                float:top;
+                background-image: url(banner.jpg);
+            } 
+            ul{
+				display: flex;
+                margin-left: -38px;
+                margin-top: 0px;
+			}
+            li{
+				border-right: 1px solid white;
+				background-color: red;
+				color: white;/*字体颜色*/
+				font-size: 18px;/*字体大小*/
+				font-family: "微软雅黑";/*字体*/
+				font-weight: 250;/*字体粗细*/
+				height: 25px;
+				text-align: center;
+				line-height: 25px;/*行高*/
+				flex: 1;				
+				list-style: none;
+			}
+			/*伪类*/
+			li:hover{
+				background-color: pink;
+				color: red;
+				cursor: pointer;/*改变鼠标的图形*/
+			}
+
+            .ui{
+                margin-top: 0px;
+                float:right;
+			}
+            
+
+            /*content*/
+            .main{
+                display: flex;
+                flex-direction: row;
+                overflow:hidden;
+                width:100%;
+                height: 1120px;
+                margin-top: 3px;
+            }
+            /*news*/
+            .box1{
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                width: 1050px;
+                height:1400px;
+            }
+            /*list*/
+            .box2{
+                display: flex;
+                flex-direction: row;
+                overflow:hidden;
+                width:1045px;
+                height: 355px;
+                border: 3px solid gainsboro;
+            }
+            /*imagelist*/
+            .box3{
+                overflow:hidden;
+                width:510px;
+                height: 385px;
+            }
+            /*textlist*/
+            .box4{
+                overflow:hidden;
+                width:500px;
+                height: 390px;
+                margin-left: 15px;
+            }
+            /*textlist title*/
+            .box5{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+                overflow:hidden;
+                width:490px;
+                height: 38px;
+                border-bottom: 3px solid rgba(194, 192, 192, 0.575); 
+            }
+
+            /*textlist*/
+            .box6{
+                overflow:hidden;
+                width: 500px;
+                height:720px;
+                border-radius: 10px;
+                border: 3px solid gainsboro;
+            }
+
+            .box7{
+                display: flex;
+                flex-direction: column;
+                overflow:hidden;
+                width: 530px;
+                height: 1400px;
+                border-radius: 10px;
+                margin-left:30px;
+            }
+            
+            .box8{
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+                width: 1050px;
+                height: 1000px;
+                margin-top: 20px;
+            }
+
+            .box9{
+                overflow: hidden;
+                width: 516px;
+                height:347px;
+                border-radius: 10px;
+                border: 3px solid gainsboro;
+                margin-bottom: 20px;
+            }
+
+            .box10{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+                overflow:hidden;
+                width:515px;
+                height: 38px;
+                border-bottom: 3px solid rgba(194, 192, 192, 0.575); 
+            }
+
+            .box11{
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                width: 440px;
+                height: 1500px;
+                margin-left: 10px;
+            }
+
+            .box12{
+                display: flex;
+                flex-direction:column;
+                overflow: hidden;
+                width: 434px;
+                height:180px;
+                border: 2px solid gainsboro;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+
+            .box13{
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between;
+                overflow:hidden;
+                width:431px;
+                height: 38px;
+                border-bottom: 3px solid rgba(194, 192, 192, 0.575); 
+            }
+            
+            .box14{
+                display: flex;
+                flex-direction:column;
+                overflow: hidden;
+                width:434px;
+                height:480px;
+            }
+            
+            .box15{
+                display: flex;
+                flex-direction:column;
+                overflow: hidden;
+                width:434px;
+                height:85px;
+                border: 2px solid gainsboro;
+                background-color:rgb(197, 34, 34);
+                border-radius: 10px;   
+                margin-top: 15px;
+            }
+
+            .box16{
+                display: flex;
+                flex-direction:column;
+                overflow: hidden;
+                width:434px;
+                height:270px;
+                border: 2px solid gainsboro;
+                border-radius: 10px;   
+                margin-top: 15px;
+            }
+
+            .box17{
+                display: flex;
+                flex-direction:row;
+                overflow: hidden;
+                width: 400px;
+                height:60px;
+                margin-left:70px;
+            }
+
+            .imagelist1{
+                width: 500px;
+                height: 318px;
+                float:left;
+                background-image: url(ul-imglist1.jpg);
+                background-size:100%;
+                background-repeat:no-repeat;
+                border: 3px solid gainsboro;
+            }
+            
+            .set{
+                display: flex;
+                margin-top: 293px;
+                float:right;
+            }
+
+            .mode{
+				border-right: 20px solid parent;
+				background-color: gray;
+				color: white;/*字体颜色*/
+				font-size: 18px;/*字体大小*/
+				font-family: "微软雅黑";/*字体*/
+				font-weight: 250;/*字体粗细*/
+				height: 25px;
+                width: 50px;
+				text-align: center;
+				line-height: 25px;/*行高*/
+				flex: 1;				
+				list-style: none;
+                opacity: 0.75;
+            }
+			/*伪类*/
+			.mode:hover{
+				background-color: red;
+                opacity: 0.4;
+				color: white;
+				cursor: pointer;/*改变鼠标的图形*/
+			}        
+            /*language*/
+            .word1{
+                font-size: 18px;
+                font-family: "微软雅黑";
+                font-weight: 250;
+                margin-left: 40px;
+            }
+            /*title*/
+            .word2{
+                font-size: 24px;
+                font-family: "微软雅黑";
+                color:red;
+                font-weight: bold;
+                margin-left:10px;
+            }
+            
+            .word3{
+                font-size: 24px;
+                font-family: "微软雅黑";
+                margin-left:10px;
+            }
+
+            .word4{
+                font-size: 24px;
+                font-family: "微软雅黑";
+                margin-left:34px;
+            }
+
+            .word5{
+                font-size: 28px;
+                font-family: "微软雅黑";
+                color:white;
+                margin-left:30px;
+                text-decoration: none;
+            }
+
+            .word6{
+                font-size: 28px;
+                font-family: "微软雅黑";
+                color:gainsboro;
+                margin-top:15px;
+            }
+
+            .word7{
+                font-size: 28px;
+                font-family: "微软雅黑";
+                color:red;
+                margin-top:15px;
+            }
+
+            .entry{
+                font-size:18px;
+                font-family: "微软雅黑";
+                font-weight: 250;
+                color:gray;
+                margin-top: 5px;
+                text-decoration:none;
+            }
+
+            .middle{
+                font-size:20px;
+                font-family: "微软雅黑";
+                font-weight: bold;
+                color:red;
+                text-align: center;
+            }
+
+            .border{
+                font-size:22px;
+                font-family: "微软雅黑";
+                color:gray;
+                text-align: center;
+            }
+
+            .searchin{
+                margin-left: 6px;
+                padding:2px 150px 2px 0;
+                font-size: 18px;
+            }
+
+            .login{
+                padding:0 30px 0 0;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .btnsize{
+                padding:3px 10px 3px 10px;
+                font-size: 18px;
+                text-align:center;
+            }
+
+            .btnset{
+                padding:0 15px 0 15px;
+                font-size: 24px;
+                text-align:center;
+                margin-left: 100px;
+            }
+
+            .reset{
+                padding:2px 15px 2px 15px;
+                font-size: 24px;
+                text-align:center;
+                margin-left:65px;
+            }
+
+            .repeatcontent{
+                width:430px;
+                height:50px;
+                margin-top:15px;
+                border:2px solid gainsboro;
+            }
+
+            .b{
+                overflow:hidden;
+                width:431px;
+                height: 55px;
+                border-bottom: 2px solid white;
+            }
+            
+            .option{
+                padding:2px 140px 2px 140px;
+                font-size: 28px;
+                margin-left:10px;
+                margin-top:15px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="banner">
+                <div class="ui">
+                    <button>简体中文</button>
+                    <button>繁體中文</button>
+                    <button>English</button>
+                </div>
+            </div>
+                <ul>
+                    <li>网站首页</li>
+                    <li>企业概括</li>
+                    <li>企业文化</li>
+                    <li>资质信誉</li>
+                    <li>技术水平</li>
+                    <li>工程业绩</li>
+                    <li>质量管理</li>
+                    <li>党群建设</li>
+                    <li>社会责任</li>
+                    <li>国际合作</li>
+                    <li>人力资源</li>
+                    <li>联系我们</li>
+                </ul>
+        </div>
+
+        <div class="main">
+            <div class="box1">
+                <div class="box2">
+                    <div class="box3">
+                        <div class="imagelist1">
+                            <ul class="set">
+                                <li class="mode">1</li>
+                                <li class="mode">2</li>
+                                <li class="mode">3</li>
+                                <li class="mode">4</li>
+                                <li class="mode">5</li>
+                            </ul>    
+                        </div>
+                        <div class="word1">我院中标锡盟-南京10000kv特高压交流工程两标包</div>
+                    </div>
+                    <div class="box4">
+                            <div class="box5">
+                                <div class="word2">>企业要闻</div>
+                                <a href=""
+                                    class="entry">更多...</a>
+                            </div>
+                            <div class="middle">我院中标锡盟-南京10000kv特高压交流工程两标包</div>
+                    </div>
+                    
+
+                </div>
+            <div class="box8">
+                <div class="box6">
+                    <div class="box5">
+                        <div class="word2">企业动态</div>
+                        <a href=""
+                            class="entry">更多...</a>
+                    </div>
+                </div>
+
+                <div class="box7">
+                    <div class="box9">
+                        <div class="box10">
+                            <div class="word2">业务信息</div>
+                            <a href=""
+                                class="entry">更多...</a>
+                    
+                        </div>
+                    </div>
+
+                    <div class="box9">
+                        <div class="box10">
+                            <div class="word2">顾客反馈</div>
+                            <a href=""
+                                class="entry">更多...</a>
+                    
+                            </div>
+                
+                        </div>
+                </div>
+            </div>
+            </div>
+            <div class="box11">
+                <div >
+                    <input type="text" class="searchin" placeholder="站内搜索">
+                    <input type="button" class="btnsize"value="Go" >
+                </div>
+                <div class="box12">
+                    <div class="box13">
+                        <div class="word2">用户登录</div>
+                    </div>
+
+                    <div>
+                        <div class="word3">用户名：
+                            <input type="text" class="login">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="word4">密码：
+                            <input type="password" class="login">
+                        </div>
+                        <input type="button" class="btnset" value="登录">
+                        <input type="button" class="reset" value="重置">
+                    </div>
+                </div>
+                <div class="box14">
+                    <div class="repeatcontent"></div>
+                    <div class="repeatcontent"></div>
+                    <div class="repeatcontent"></div>
+                    <div class="repeatcontent"></div>
+                    <div class="repeatcontent"></div>
+                    <div class="repeatcontent"></div>
+                    <div class="repeatcontent"></div>
+                </div>
+                <div class="box15">
+                    <div class="b">
+                        <a href=""
+                            class="word5">>企业要闻</a>
+                    </div>
+                    <a href="" 
+                        class="word5">>业务平台</a>
+                </div>
+                <div class="box16">
+                    <div class="box13">
+                        <div class="word2">企业要闻</div>
+                    </div>
+                    <div>
+                        <select class="option">
+                            <option value="上级单位">上级单位</option>
+                        </select>
+                        <select class="option">
+                            <option value="兄弟单位">兄弟单位</option>
+                        </select>
+                        <select class="option">
+                            <option value="相关单位">相关单位</option>
+                        </select>
+                    </div>
+                    <div class="box17">
+                        <div class="word6">本周访问量</div>
+                        <div class="word7">424168</div>
+                        <div class="word6">次</div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+                
+
+        
+    </body>
+</html>
